@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Hub 2026 | Next-Gen Interface</title>
+    <meta name="description" content="Ultra-modern personal link hub interface.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons (Phosphor Icons for sleek look) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Terminal Boot Overlay -->
+    <div id="terminal-overlay">
+        <div class="terminal-content">
+            <div id="terminal-text"></div>
+            <div class="cursor-blink">_</div>
+        </div>
+    </div>
+
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Language Switcher -->
+    <div class="language-selector">
+        <span class="lang-option active" data-lang="en">EN</span>
+        <span class="separator">/</span>
+        <span class="lang-option" data-lang="ru">RU</span>
+        <span class="separator">/</span>
+        <span class="lang-option" data-lang="uz">UZ</span>
+    </div>
+
+    <main class="container" id="main-content" style="opacity: 0;">
+        <div class="phone-frame" data-tilt-panel>
+            <div class="notch"></div>
+            <div class="screen">
+                <!-- Profile Section -->
+                <header class="profile-section fade-in-up">
+                    <div class="avatar-container">
+                        <img src="avatar.png" alt="Profile Avatar" class="avatar-img" id="avatar-img">
+                    </div>
+                    <h1 class="profile-name">Alex Cipher</h1>
+                    <p class="profile-bio" data-i18n="bio">(Digital Designer Model)</p>
+                </header>
+
+                <!-- Social Icons (Navy Row) -->
+                <section class="social-row fade-in-up delay-1">
+                    <a href="#" class="social-icon">
+                        <i class="ph-fill ph-phone-call"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="ph-fill ph-behance-logo"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="ph-fill ph-envelope-simple"></i>
+                    </a>
+                </section>
+
+                <section class="social-row fade-in-up delay-1" style="margin-top: 10px;">
+                    <a href="#" class="social-icon">
+                        <i class="ph-fill ph-whatsapp-logo"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="ph-fill ph-instagram-logo"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="ph-fill ph-facebook-logo"></i>
+                    </a>
+                </section>
+
+                <!-- Actions (Solid Buttons) -->
+                <section class="actions-section fade-in-up delay-2">
+                    <a href="#" class="btn btn-navy" data-tilt-btn>
+                        <span data-i18n="btn_portfolio">MEU PORTFÓLIO</span>
+                    </a>
+                    <a href="#" class="btn btn-navy" data-tilt-btn>
+                        <span data-i18n="btn_text">SEU TEXTO</span>
+                    </a>
+                    <a href="#" class="btn btn-teal" data-tilt-btn>
+                        <i class="ph-fill ph-spotify-logo" style="margin-right: 8px;"></i>
+                        <span data-i18n="btn_spotify">ABRIR SPOTIFY</span>
+                    </a>
+                    <a href="#" class="btn btn-teal" data-tilt-btn>
+                        <i class="ph-fill ph-calendar-check" style="margin-right: 8px;"></i>
+                        <span data-i18n="btn_calendar">AGENDA 2026</span>
+                    </a>
+                </section>
+            </div>
+
+            <a href="#" class="social-card highlight" data-tilt>
+                <div class="card-glass"></div>
+                <div class="card-content">
+                    <i class="ph-fill ph-briefcase"></i>
+                    <span>Portfolio</span>
+                </div>
+            </a>
+            </section>
+
+            <!-- Actions -->
+            <section class="actions-section fade-in-up delay-2">
+                <a href="#" class="btn btn-primary">
+                    <span>Collaborate</span>
+                    <div class="btn-shine"></div>
+                </a>
+                <a href="#" class="btn btn-secondary">
+                    <span>Contact</span>
+                </a>
+            </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
