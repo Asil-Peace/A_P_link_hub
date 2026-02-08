@@ -144,9 +144,9 @@ body {
     border-radius: 45px;
     box-shadow:
         0 0 0 2px #333,
-        0 0 0 4px #000,
-        0 20px 50px rgba(0, 0, 0, 0.8),
-        0 0 100px rgba(0, 243, 255, 0.1);
+        0 0 0 4px #111,
+        0 30px 60px rgba(0, 0, 0, 0.9),
+        0 0 120px rgba(0, 243, 255, 0.2);
     /* Subtle glow */
     position: relative;
     padding: 12px;
@@ -227,10 +227,14 @@ body {
 }
 
 .profile-bio {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #666;
-    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #555;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #004b66, #00a878);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Social Rows */
@@ -292,12 +296,12 @@ body {
 }
 
 .btn-navy {
-    background: var(--navy-blue);
+    background: linear-gradient(135deg, #004b66, #002d3d);
     color: white;
 }
 
 .btn-teal {
-    background: var(--teal-green);
+    background: linear-gradient(135deg, #00a878, #007554);
     color: white;
 }
 

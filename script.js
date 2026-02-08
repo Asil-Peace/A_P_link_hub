@@ -17,21 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Translations ---
     const translations = {
         en: {
-            bio: "(Digital Designer Model)",
+            bio: "Creative Developer | AI & Vibe Coding Enthusiast",
             btn_portfolio: "MY PORTFOLIO",
             btn_text: "YOUR TEXT",
             btn_spotify: "OPEN SPOTIFY",
             btn_calendar: "CALENDAR 2026"
         },
         ru: {
-            bio: "(Цифровой Дизайнер)",
+            bio: "Креативный разработчик | AI & Vibe Coding Энтузиаст",
             btn_portfolio: "МОЕ ПОРТФОЛИО",
             btn_text: "ВАШ ТЕКСТ",
             btn_spotify: "ОТКРЫТЬ SPOTIFY",
             btn_calendar: "КАЛЕНДАРЬ 2026"
         },
         uz: {
-            bio: "(Raqamli Dizayner)",
+            bio: "Raqamli olam ijodkori | AI va Vibe Coding ishqibozi",
             btn_portfolio: "MENING PORTFOLIOM",
             btn_text: "SIZNING MATNINGIZ",
             btn_spotify: "SPOTIFY-NI OCHISH",
