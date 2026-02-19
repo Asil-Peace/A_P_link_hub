@@ -7,10 +7,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeBtn = document.getElementById('theme-btn');
     const langOptions = document.querySelectorAll('.lang-option');
 
+    // Initialize Theme from localStorage
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', savedTheme);
+    themeBtn.innerHTML = savedTheme === 'dark' ? '<i class="ph-bold ph-moon"></i>' : '<i class="ph-bold ph-sun"></i>';
+
+    // Initialize Language from localStorage
+    const savedLang = localStorage.getItem('lang') || 'en';
+    const activeLangBtn = document.querySelector(`.lang-option[data-lang="${savedLang}"]`);
+    if (activeLangBtn) {
+        langOptions.forEach(o => o.classList.remove('active'));
+        activeLangBtn.classList.add('active');
+        updateLang(savedLang);
+    }
+
     // Theme & Language handlers
     themeBtn?.addEventListener('click', () => {
         const t = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
         html.setAttribute('data-theme', t);
+        localStorage.setItem('theme', t);
         themeBtn.innerHTML = t === 'dark' ? '<i class="ph-bold ph-moon"></i>' : '<i class="ph-bold ph-sun"></i>';
     });
 
@@ -18,7 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
         opt.addEventListener('click', () => {
             langOptions.forEach(o => o.classList.remove('active'));
             opt.classList.add('active');
-            updateLang(opt.getAttribute('data-lang'));
+            const lang = opt.getAttribute('data-lang');
+            localStorage.setItem('lang', lang);
+            updateLang(lang);
         });
     });
 
@@ -48,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Performance optimization
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const PARTICLE_COUNT = isMobile ? 350 : 800; // Balanced particle density
+    const PARTICLE_COUNT = isMobile ? 180 : 500; // Optimized for performance/battery
     const RIPPLE_DURATION = 60; // frames
 
     // Cursor tracking with smooth easing

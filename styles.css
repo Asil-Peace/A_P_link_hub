@@ -259,6 +259,7 @@ body {
     border-radius: 50%;
     border: 2px solid var(--card-border);
     object-fit: cover;
+    image-rendering: high-quality;
     z-index: 2;
     position: relative;
     transition: var(--transition);
@@ -535,17 +536,24 @@ body {
     box-shadow: 0 0 20px rgba(234, 67, 53, 0.3);
 }
 
-.bottom-icon.mail i {
-    color: #ea4335;
+.bottom-icon.mail:hover {
+    border-color: #ea4335;
+    box-shadow: 0 0 20px rgba(234, 67, 53, 0.3);
 }
 
-.bottom-icon.discord:hover {
-    border-color: #5865f2;
-    box-shadow: 0 0 20px rgba(88, 101, 242, 0.3);
+.bottom-icon.mail svg {
+    width: clamp(1.4rem, 3vh, 1.6rem);
+    height: clamp(1.4rem, 3vh, 1.6rem);
+    transition: var(--transition);
 }
 
-.bottom-icon.discord i {
-    color: #5865f2;
+.bottom-icon.facebook:hover {
+    border-color: #1877f2;
+    box-shadow: 0 0 20px rgba(24, 119, 242, 0.3);
+}
+
+.bottom-icon.facebook i {
+    color: #1877f2;
 }
 
 /* Responsive */
